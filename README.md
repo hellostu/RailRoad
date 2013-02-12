@@ -2,10 +2,9 @@ RailRoad
 ========
 
 Process the Frames of an iOS device Camera in realtime quickly and easily 
- \author Stuart Lynch stuart.lynch@uea.ac.uk
 
  
- This is a completely Open Source project that provides a simple framework to process the live camera frames of an iOS device. It is distributed under the \link<License>GNU General Public License\endlink. I developed this because I wanted an easy way to code image processing algorithms on a mobile device. OpenGL ES 2 can be quite complex to set up and use, so this project aims to simplify the setup, and target it for a specific single texture application. 
+ This is a completely Open Source project that provides a simple framework to process the live camera frames of an iOS device. It is distributed under the GNU General Public License. I developed this because I wanted an easy way to code image processing algorithms on a mobile device. OpenGL ES 2 can be quite complex to set up and use, so this project aims to simplify the setup, and target it for a specific single texture application. 
  More detailed documentation can be found in the Doc folder of this project.
  
  The flow of processing is:
@@ -51,7 +50,7 @@ The brightness shader simply scales the pixel by a given amount. We have to prov
 The method above defines the shader uniform variable and defines it's datatype. In this case it is a float. We can then set the value of this variable by calling the following code:
 
 ```objective-c
-GLfloat brightnessValue = 0.5f;`
+GLfloat brightnessValue = 0.5f;
 [_cameraView.openGL shaderUniform:@"BrightnessValue" setValue:&brightnessValue];
 ```
  
