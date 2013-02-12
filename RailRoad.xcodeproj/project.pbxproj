@@ -1,0 +1,581 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		449BE72C16C668A9005FEC5E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449BE72B16C668A9005FEC5E /* UIKit.framework */; };
+		449BE72E16C668A9005FEC5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449BE72D16C668A9005FEC5E /* Foundation.framework */; };
+		449BE73016C668A9005FEC5E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449BE72F16C668A9005FEC5E /* CoreGraphics.framework */; };
+		449BE73616C668A9005FEC5E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 449BE73416C668A9005FEC5E /* InfoPlist.strings */; };
+		449BE73816C668A9005FEC5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 449BE73716C668A9005FEC5E /* main.m */; };
+		449BE73C16C668A9005FEC5E /* RRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 449BE73B16C668A9005FEC5E /* RRAppDelegate.m */; };
+		449BE73E16C668A9005FEC5E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 449BE73D16C668A9005FEC5E /* Default.png */; };
+		449BE74016C668A9005FEC5E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 449BE73F16C668A9005FEC5E /* Default@2x.png */; };
+		449BE74216C668A9005FEC5E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 449BE74116C668A9005FEC5E /* Default-568h@2x.png */; };
+		449BE74A16C668A9005FEC5E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449BE74916C668A9005FEC5E /* SenTestingKit.framework */; };
+		449BE74B16C668A9005FEC5E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449BE72B16C668A9005FEC5E /* UIKit.framework */; };
+		449BE74C16C668A9005FEC5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449BE72D16C668A9005FEC5E /* Foundation.framework */; };
+		449BE75416C668A9005FEC5E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 449BE75216C668A9005FEC5E /* InfoPlist.strings */; };
+		449BE75716C668A9005FEC5E /* RailRoadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 449BE75616C668A9005FEC5E /* RailRoadTests.m */; };
+		449BE76316C668E8005FEC5E /* RRMatrix2D.m in Sources */ = {isa = PBXBuildFile; fileRef = 449BE76216C668E8005FEC5E /* RRMatrix2D.m */; };
+		449BE76516C66A57005FEC5E /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449BE76416C66A57005FEC5E /* Accelerate.framework */; };
+		449BE76916C66BB7005FEC5E /* RRCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 449BE76816C66BB7005FEC5E /* RRCameraView.m */; };
+		449BE76C16C67091005FEC5E /* RROpenGL.m in Sources */ = {isa = PBXBuildFile; fileRef = 449BE76B16C67091005FEC5E /* RROpenGL.m */; };
+		449BE76E16C6716D005FEC5E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449BE76D16C6716D005FEC5E /* OpenGLES.framework */; };
+		449BE77016C67174005FEC5E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449BE76F16C67174005FEC5E /* QuartzCore.framework */; };
+		449BE77316C67463005FEC5E /* RRStaticMaths.m in Sources */ = {isa = PBXBuildFile; fileRef = 449BE77216C67463005FEC5E /* RRStaticMaths.m */; };
+		449BE77616C675E3005FEC5E /* RRCameraCaptureSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 449BE77516C675E3005FEC5E /* RRCameraCaptureSession.m */; };
+		449BE77816C67656005FEC5E /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449BE77716C67656005FEC5E /* CoreVideo.framework */; };
+		449BE77A16C6765D005FEC5E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449BE77916C6765D005FEC5E /* AVFoundation.framework */; };
+		449BE77C16C67662005FEC5E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 449BE77B16C67662005FEC5E /* CoreMedia.framework */; };
+		44BAF6B116C67D4D00AA5FF6 /* vertexShader.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 44BAF6AF16C67D4D00AA5FF6 /* vertexShader.glsl */; };
+		44BAF6B216C67D4D00AA5FF6 /* GreyWorld.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 44BAF6B016C67D4D00AA5FF6 /* GreyWorld.glsl */; };
+		44BAF6B516C67F0000AA5FF6 /* RRMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44BAF6B416C67F0000AA5FF6 /* RRMainViewController.m */; };
+		44BAF6B916C7FF3900AA5FF6 /* Brightness.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 44BAF6B816C7FF3900AA5FF6 /* Brightness.glsl */; };
+		44BAF6BC16C83F0000AA5FF6 /* mainpage.dox in Resources */ = {isa = PBXBuildFile; fileRef = 44BAF6BB16C83F0000AA5FF6 /* mainpage.dox */; };
+		44BAF6BE16C903FA00AA5FF6 /* DoNothing.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 44BAF6BD16C903FA00AA5FF6 /* DoNothing.glsl */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		449BE74D16C668A9005FEC5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 449BE72016C668A9005FEC5E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 449BE72716C668A9005FEC5E;
+			remoteInfo = RailRoad;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		449BE72816C668A9005FEC5E /* RailRoad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RailRoad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		449BE72B16C668A9005FEC5E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		449BE72D16C668A9005FEC5E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		449BE72F16C668A9005FEC5E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		449BE73316C668A9005FEC5E /* RailRoad-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RailRoad-Info.plist"; sourceTree = "<group>"; };
+		449BE73516C668A9005FEC5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		449BE73716C668A9005FEC5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		449BE73916C668A9005FEC5E /* RailRoad-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RailRoad-Prefix.pch"; sourceTree = "<group>"; };
+		449BE73A16C668A9005FEC5E /* RRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRAppDelegate.h; sourceTree = "<group>"; };
+		449BE73B16C668A9005FEC5E /* RRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRAppDelegate.m; sourceTree = "<group>"; };
+		449BE73D16C668A9005FEC5E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		449BE73F16C668A9005FEC5E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		449BE74116C668A9005FEC5E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		449BE74816C668A9005FEC5E /* RailRoadTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RailRoadTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		449BE74916C668A9005FEC5E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		449BE75116C668A9005FEC5E /* RailRoadTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RailRoadTests-Info.plist"; sourceTree = "<group>"; };
+		449BE75316C668A9005FEC5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		449BE75516C668A9005FEC5E /* RailRoadTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RailRoadTests.h; sourceTree = "<group>"; };
+		449BE75616C668A9005FEC5E /* RailRoadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RailRoadTests.m; sourceTree = "<group>"; };
+		449BE76116C668E8005FEC5E /* RRMatrix2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRMatrix2D.h; sourceTree = "<group>"; };
+		449BE76216C668E8005FEC5E /* RRMatrix2D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRMatrix2D.m; sourceTree = "<group>"; };
+		449BE76416C66A57005FEC5E /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		449BE76716C66BB7005FEC5E /* RRCameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRCameraView.h; sourceTree = "<group>"; };
+		449BE76816C66BB7005FEC5E /* RRCameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRCameraView.m; sourceTree = "<group>"; };
+		449BE76A16C67091005FEC5E /* RROpenGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RROpenGL.h; sourceTree = "<group>"; };
+		449BE76B16C67091005FEC5E /* RROpenGL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RROpenGL.m; sourceTree = "<group>"; };
+		449BE76D16C6716D005FEC5E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		449BE76F16C67174005FEC5E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		449BE77116C67463005FEC5E /* RRStaticMaths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRStaticMaths.h; sourceTree = "<group>"; };
+		449BE77216C67463005FEC5E /* RRStaticMaths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRStaticMaths.m; sourceTree = "<group>"; };
+		449BE77416C675E3005FEC5E /* RRCameraCaptureSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRCameraCaptureSession.h; sourceTree = "<group>"; };
+		449BE77516C675E3005FEC5E /* RRCameraCaptureSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRCameraCaptureSession.m; sourceTree = "<group>"; };
+		449BE77716C67656005FEC5E /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		449BE77916C6765D005FEC5E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		449BE77B16C67662005FEC5E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		44BAF6AF16C67D4D00AA5FF6 /* vertexShader.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vertexShader.glsl; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.glsl; };
+		44BAF6B016C67D4D00AA5FF6 /* GreyWorld.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GreyWorld.glsl; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.glsl; };
+		44BAF6B316C67F0000AA5FF6 /* RRMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRMainViewController.h; sourceTree = "<group>"; };
+		44BAF6B416C67F0000AA5FF6 /* RRMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRMainViewController.m; sourceTree = "<group>"; };
+		44BAF6B816C7FF3900AA5FF6 /* Brightness.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Brightness.glsl; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.glsl; };
+		44BAF6BB16C83F0000AA5FF6 /* mainpage.dox */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mainpage.dox; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		44BAF6BD16C903FA00AA5FF6 /* DoNothing.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DoNothing.glsl; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.glsl; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		449BE72516C668A9005FEC5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				449BE77C16C67662005FEC5E /* CoreMedia.framework in Frameworks */,
+				449BE77A16C6765D005FEC5E /* AVFoundation.framework in Frameworks */,
+				449BE77816C67656005FEC5E /* CoreVideo.framework in Frameworks */,
+				449BE77016C67174005FEC5E /* QuartzCore.framework in Frameworks */,
+				449BE76E16C6716D005FEC5E /* OpenGLES.framework in Frameworks */,
+				449BE76516C66A57005FEC5E /* Accelerate.framework in Frameworks */,
+				449BE72C16C668A9005FEC5E /* UIKit.framework in Frameworks */,
+				449BE72E16C668A9005FEC5E /* Foundation.framework in Frameworks */,
+				449BE73016C668A9005FEC5E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		449BE74416C668A9005FEC5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				449BE74A16C668A9005FEC5E /* SenTestingKit.framework in Frameworks */,
+				449BE74B16C668A9005FEC5E /* UIKit.framework in Frameworks */,
+				449BE74C16C668A9005FEC5E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		449BE71F16C668A9005FEC5E = {
+			isa = PBXGroup;
+			children = (
+				449BE73116C668A9005FEC5E /* RailRoad */,
+				449BE74F16C668A9005FEC5E /* RailRoadTests */,
+				449BE72A16C668A9005FEC5E /* Frameworks */,
+				449BE72916C668A9005FEC5E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		449BE72916C668A9005FEC5E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				449BE72816C668A9005FEC5E /* RailRoad.app */,
+				449BE74816C668A9005FEC5E /* RailRoadTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		449BE72A16C668A9005FEC5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				449BE77B16C67662005FEC5E /* CoreMedia.framework */,
+				449BE77916C6765D005FEC5E /* AVFoundation.framework */,
+				449BE77716C67656005FEC5E /* CoreVideo.framework */,
+				449BE76F16C67174005FEC5E /* QuartzCore.framework */,
+				449BE76D16C6716D005FEC5E /* OpenGLES.framework */,
+				449BE76416C66A57005FEC5E /* Accelerate.framework */,
+				449BE72B16C668A9005FEC5E /* UIKit.framework */,
+				449BE72D16C668A9005FEC5E /* Foundation.framework */,
+				449BE72F16C668A9005FEC5E /* CoreGraphics.framework */,
+				449BE74916C668A9005FEC5E /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		449BE73116C668A9005FEC5E /* RailRoad */ = {
+			isa = PBXGroup;
+			children = (
+				44BAF6BA16C8066200AA5FF6 /* App Delegate */,
+				449BE76016C668C2005FEC5E /* Math */,
+				44BAF6B616C7FC2300AA5FF6 /* Camera */,
+				449BE76616C66B96005FEC5E /* OpenGL */,
+				44BAF6B316C67F0000AA5FF6 /* RRMainViewController.h */,
+				44BAF6B416C67F0000AA5FF6 /* RRMainViewController.m */,
+				44BAF6AE16C67D4200AA5FF6 /* Shaders */,
+				449BE73216C668A9005FEC5E /* Supporting Files */,
+			);
+			path = RailRoad;
+			sourceTree = "<group>";
+		};
+		449BE73216C668A9005FEC5E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				449BE73316C668A9005FEC5E /* RailRoad-Info.plist */,
+				449BE73416C668A9005FEC5E /* InfoPlist.strings */,
+				449BE73716C668A9005FEC5E /* main.m */,
+				449BE73916C668A9005FEC5E /* RailRoad-Prefix.pch */,
+				449BE73D16C668A9005FEC5E /* Default.png */,
+				449BE73F16C668A9005FEC5E /* Default@2x.png */,
+				449BE74116C668A9005FEC5E /* Default-568h@2x.png */,
+				44BAF6BB16C83F0000AA5FF6 /* mainpage.dox */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		449BE74F16C668A9005FEC5E /* RailRoadTests */ = {
+			isa = PBXGroup;
+			children = (
+				449BE75516C668A9005FEC5E /* RailRoadTests.h */,
+				449BE75616C668A9005FEC5E /* RailRoadTests.m */,
+				449BE75016C668A9005FEC5E /* Supporting Files */,
+			);
+			path = RailRoadTests;
+			sourceTree = "<group>";
+		};
+		449BE75016C668A9005FEC5E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				449BE75116C668A9005FEC5E /* RailRoadTests-Info.plist */,
+				449BE75216C668A9005FEC5E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		449BE76016C668C2005FEC5E /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				449BE76116C668E8005FEC5E /* RRMatrix2D.h */,
+				449BE76216C668E8005FEC5E /* RRMatrix2D.m */,
+				449BE77116C67463005FEC5E /* RRStaticMaths.h */,
+				449BE77216C67463005FEC5E /* RRStaticMaths.m */,
+			);
+			name = Math;
+			sourceTree = "<group>";
+		};
+		449BE76616C66B96005FEC5E /* OpenGL */ = {
+			isa = PBXGroup;
+			children = (
+				449BE76716C66BB7005FEC5E /* RRCameraView.h */,
+				449BE76816C66BB7005FEC5E /* RRCameraView.m */,
+				449BE76A16C67091005FEC5E /* RROpenGL.h */,
+				449BE76B16C67091005FEC5E /* RROpenGL.m */,
+			);
+			name = OpenGL;
+			sourceTree = "<group>";
+		};
+		44BAF6AE16C67D4200AA5FF6 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				44BAF6AF16C67D4D00AA5FF6 /* vertexShader.glsl */,
+				44BAF6B016C67D4D00AA5FF6 /* GreyWorld.glsl */,
+				44BAF6B816C7FF3900AA5FF6 /* Brightness.glsl */,
+				44BAF6BD16C903FA00AA5FF6 /* DoNothing.glsl */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+		44BAF6B616C7FC2300AA5FF6 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				449BE77416C675E3005FEC5E /* RRCameraCaptureSession.h */,
+				449BE77516C675E3005FEC5E /* RRCameraCaptureSession.m */,
+			);
+			name = Camera;
+			sourceTree = "<group>";
+		};
+		44BAF6BA16C8066200AA5FF6 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				449BE73A16C668A9005FEC5E /* RRAppDelegate.h */,
+				449BE73B16C668A9005FEC5E /* RRAppDelegate.m */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		449BE72716C668A9005FEC5E /* RailRoad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 449BE75A16C668A9005FEC5E /* Build configuration list for PBXNativeTarget "RailRoad" */;
+			buildPhases = (
+				449BE72416C668A9005FEC5E /* Sources */,
+				449BE72516C668A9005FEC5E /* Frameworks */,
+				449BE72616C668A9005FEC5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RailRoad;
+			productName = RailRoad;
+			productReference = 449BE72816C668A9005FEC5E /* RailRoad.app */;
+			productType = "com.apple.product-type.application";
+		};
+		449BE74716C668A9005FEC5E /* RailRoadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 449BE75D16C668A9005FEC5E /* Build configuration list for PBXNativeTarget "RailRoadTests" */;
+			buildPhases = (
+				449BE74316C668A9005FEC5E /* Sources */,
+				449BE74416C668A9005FEC5E /* Frameworks */,
+				449BE74516C668A9005FEC5E /* Resources */,
+				449BE74616C668A9005FEC5E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				449BE74E16C668A9005FEC5E /* PBXTargetDependency */,
+			);
+			name = RailRoadTests;
+			productName = RailRoadTests;
+			productReference = 449BE74816C668A9005FEC5E /* RailRoadTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		449BE72016C668A9005FEC5E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RR;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = UEA;
+			};
+			buildConfigurationList = 449BE72316C668A9005FEC5E /* Build configuration list for PBXProject "RailRoad" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 449BE71F16C668A9005FEC5E;
+			productRefGroup = 449BE72916C668A9005FEC5E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				449BE72716C668A9005FEC5E /* RailRoad */,
+				449BE74716C668A9005FEC5E /* RailRoadTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		449BE72616C668A9005FEC5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				449BE73616C668A9005FEC5E /* InfoPlist.strings in Resources */,
+				449BE73E16C668A9005FEC5E /* Default.png in Resources */,
+				449BE74016C668A9005FEC5E /* Default@2x.png in Resources */,
+				449BE74216C668A9005FEC5E /* Default-568h@2x.png in Resources */,
+				44BAF6B116C67D4D00AA5FF6 /* vertexShader.glsl in Resources */,
+				44BAF6B216C67D4D00AA5FF6 /* GreyWorld.glsl in Resources */,
+				44BAF6B916C7FF3900AA5FF6 /* Brightness.glsl in Resources */,
+				44BAF6BC16C83F0000AA5FF6 /* mainpage.dox in Resources */,
+				44BAF6BE16C903FA00AA5FF6 /* DoNothing.glsl in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		449BE74516C668A9005FEC5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				449BE75416C668A9005FEC5E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		449BE74616C668A9005FEC5E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		449BE72416C668A9005FEC5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				449BE73816C668A9005FEC5E /* main.m in Sources */,
+				449BE73C16C668A9005FEC5E /* RRAppDelegate.m in Sources */,
+				449BE76316C668E8005FEC5E /* RRMatrix2D.m in Sources */,
+				449BE76916C66BB7005FEC5E /* RRCameraView.m in Sources */,
+				449BE76C16C67091005FEC5E /* RROpenGL.m in Sources */,
+				449BE77316C67463005FEC5E /* RRStaticMaths.m in Sources */,
+				449BE77616C675E3005FEC5E /* RRCameraCaptureSession.m in Sources */,
+				44BAF6B516C67F0000AA5FF6 /* RRMainViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		449BE74316C668A9005FEC5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				449BE75716C668A9005FEC5E /* RailRoadTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		449BE74E16C668A9005FEC5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 449BE72716C668A9005FEC5E /* RailRoad */;
+			targetProxy = 449BE74D16C668A9005FEC5E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		449BE73416C668A9005FEC5E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				449BE73516C668A9005FEC5E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		449BE75216C668A9005FEC5E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				449BE75316C668A9005FEC5E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		449BE75816C668A9005FEC5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		449BE75916C668A9005FEC5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		449BE75B16C668A9005FEC5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RailRoad/RailRoad-Prefix.pch";
+				INFOPLIST_FILE = "RailRoad/RailRoad-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		449BE75C16C668A9005FEC5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RailRoad/RailRoad-Prefix.pch";
+				INFOPLIST_FILE = "RailRoad/RailRoad-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		449BE75E16C668A9005FEC5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RailRoad.app/RailRoad";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RailRoad/RailRoad-Prefix.pch";
+				INFOPLIST_FILE = "RailRoadTests/RailRoadTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		449BE75F16C668A9005FEC5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RailRoad.app/RailRoad";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RailRoad/RailRoad-Prefix.pch";
+				INFOPLIST_FILE = "RailRoadTests/RailRoadTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		449BE72316C668A9005FEC5E /* Build configuration list for PBXProject "RailRoad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				449BE75816C668A9005FEC5E /* Debug */,
+				449BE75916C668A9005FEC5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		449BE75A16C668A9005FEC5E /* Build configuration list for PBXNativeTarget "RailRoad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				449BE75B16C668A9005FEC5E /* Debug */,
+				449BE75C16C668A9005FEC5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		449BE75D16C668A9005FEC5E /* Build configuration list for PBXNativeTarget "RailRoadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				449BE75E16C668A9005FEC5E /* Debug */,
+				449BE75F16C668A9005FEC5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 449BE72016C668A9005FEC5E /* Project object */;
+}

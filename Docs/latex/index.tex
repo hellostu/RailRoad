@@ -1,0 +1,54 @@
+\begin{DoxyAuthor}{Author}
+Stuart Lynch \href{mailto:stuart.lynch@uea.ac.uk}{\tt stuart.\-lynch@uea.\-ac.\-uk}
+\end{DoxyAuthor}
+This is a completely Open Source project that provides a simple framework to process the live camera frames of an i\-O\-S device. It is distributed under the G\-N\-U General Public License. I developed this because I wanted an easy way to code image processing algorithms on a mobile device. Open\-G\-L E\-S 2 can be quite complex to set up and use, so this project aims to simplify the setup, and target it for a specific single texture application.
+
+The flow of processing is\-:
+
+
+\begin{DoxyEnumerate}
+\item Retrieve a U\-I\-Image of the frame (a U\-I\-Image is a class developed by Apple to represent a stored image).
+\item Get the bytes that make up the image and do any global processing on the C\-P\-U.
+\item Take any output from the C\-P\-U processing and send to the G\-P\-U for super fast pixel-\/by-\/pixel processing.
+\item Display the frame.
+\end{DoxyEnumerate}
+
+\subsection*{Setup}
+
+If you are familar with i\-O\-S and Cocoa then you can embed this in your own project. Simply add an instance of \hyperlink{interface_r_r_camera_view}{R\-R\-Camera\-View} and embed it where you like in your interface. Follow the instructions for further setup below.
+
+If you are not familar with i\-O\-S then you can still used this project. The main class of interest to you is R\-R\-Main\-View\-Controller. You can develop your own algorithm just by adding your own code here. R\-R\-Main\-View\-Controller is already setup with initalization code, but the following documentation (for tutorial purposes) will talk you through the initalization as if it wasn't.
+
+In the {\ttfamily view\-Did\-Load} method, the first thing to do is intialize a new instance of \hyperlink{interface_r_r_camera_view}{R\-R\-Camera\-View}.
+
+{\ttfamily \-\_\-camera\-View = \mbox{[}\mbox{[}\hyperlink{interface_r_r_camera_view}{R\-R\-Camera\-View} alloc\mbox{]} init\-With\-Frame\-:C\-G\-Rect\-Make(0, 0, self.\-view.\-frame.\-size.\-width,self.\-view.\-frame.\-size.\-height)\mbox{]};}
+
+We want to recieve the delegate methods from the \hyperlink{interface_r_r_camera_capture_session}{R\-R\-Camera\-Capture\-Session} in the \hyperlink{interface_r_r_camera_view}{R\-R\-Camera\-View}. So we set our class (R\-R\-Main\-View\-Controller) to implement the {\ttfamily $<$\hyperlink{protocol_r_r_camera_capture_session_delegate-p}{R\-R\-Camera\-Capture\-Session\-Delegate}$>$}. Then add this code below the initialization of {\ttfamily \-\_\-camera\-View}\-:
+
+{\ttfamily \-\_\-camera\-View.\-camera\-Capture\-Session.\-delegate = self;}
+
+We then want to initalize Open\-G\-L on the view. We pass in the name of a fragment shader. This is a file in the bundle which has a suffix '.glsl' and contains the code for the pixel-\/by-\/pixel processing on the G\-P\-U. If we don't want to do any processing we can pass in 'Do\-Nothing' which is a shader that does no processing, it simply just displays the pixels. For this tutorial we will pass in the 'Brightness' shader.
+
+{\ttfamily \mbox{[}\-\_\-camera\-View intialize\-Open\-G\-L\-With\-Shader\-:@\char`\"{}\-Brightness\char`\"{}\mbox{]};}
+
+The brightness shader simply scales the pixel by a given amount. We have to provide it with the scaler that we want to change the brightness to. We can pass in a Uniform Variable to the shader, which is a variable that will remain constant for all of the pixels of that image. The Brightness shader contains a variable {\ttfamily Brightness\-Value}. So we will we define this using the following code\-:
+
+{\ttfamily \mbox{[}\-\_\-camera\-View.\-open\-G\-L init\-Shader\-Uniform\-:@\char`\"{}\-Brightness\-Value\char`\"{} of\-Data\-Type\-:G\-L\-S\-L\-\_\-\-D\-A\-T\-A\-\_\-\-T\-Y\-P\-E\-\_\-\-F\-L\-O\-A\-T\mbox{]};}
+
+The method above defines the shader uniform variable and defines it's datatype. In this case it is a float. We can then set the value of this variable by calling the following code\-:
+
+{\ttfamily G\-Lfloat brightness\-Value = 0.\-5f; }\mbox{[}\-\_\-camera\-View.\-open\-G\-L shader\-Uniform\-:"Brightness\-Value" set\-Value\-:\&brightness\-Value\mbox{]};`
+
+We have to provide a pointer to the data as the value. This is because the value could be one of several datatypes, including an array. We now want to implement the delegate method. Create a new method\-:
+
+{\ttfamily -\/ (void)camera\-Capture\-Session\-:(\-R\-R\-Camera\-Capture\-Session $\ast$)session captured\-Image\-:(\-U\-I\-Image $\ast$)image}
+
+In this method we want to send the U\-I\-Image to the G\-P\-U using Open\-G\-L. We can do this by calling the following method on the Open\-G\-L instance contained in the \hyperlink{interface_r_r_camera_view}{R\-R\-Camera\-View}\-:
+
+{\ttfamily \mbox{[}\-\_\-camera\-View.\-open\-G\-L setup\-Texture\-With\-Image\-:image process\-Image\-Bytes\-Block\-:nil\mbox{]};}
+
+For the moment we won't do any processing on the C\-P\-U of the image. We will just send it straight to the G\-P\-U for display, therefore we set the {\ttfamily process\-Image\-Bytes\-Block} argument to {\ttfamily nil}. Finally we render the image by calling this function directly after\-:
+
+{\ttfamily \mbox{[}\-\_\-camera\-View.\-open\-G\-L render\mbox{]};}
+
+If you run the code, you will see the camera frames displayed at 50\% brightness. 

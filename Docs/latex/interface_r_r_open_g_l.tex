@@ -1,0 +1,160 @@
+\hypertarget{interface_r_r_open_g_l}{\section{R\-R\-Open\-G\-L Class Reference}
+\label{interface_r_r_open_g_l}\index{R\-R\-Open\-G\-L@{R\-R\-Open\-G\-L}}
+}
+
+
+A class to handle the Open\-G\-L calls for an image processing application.  
+
+
+
+
+{\ttfamily \#import $<$R\-R\-Open\-G\-L.\-h$>$}
+
+
+
+Inherits N\-S\-Object.
+
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(id) -\/ \hyperlink{interface_r_r_open_g_l_a28b3ad4fa31ec4a4175bb3dc89b71db3}{init\-With\-Layer\-:vertex\-Shader\-:fragment\-Shader\-:}
+\begin{DoxyCompactList}\small\item\em Initialize an Open\-G\-L object. \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_r_r_open_g_l_a946656991c6afc711527622321ba290d}{render}
+\begin{DoxyCompactList}\small\item\em Render the current frame. \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_r_r_open_g_l_aece4b95562f455788886ec98d85e7078}{setup\-Texture\-With\-Image\-Bytes\-:image\-Size\-:}
+\begin{DoxyCompactList}\small\item\em The class assumes a single texture, which is drawn on a 2\-D plane parralel to the screen. \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_r_r_open_g_l_a80c8099fdb52ef67650e7b3f55ebecee}{setup\-Texture\-With\-Image\-:process\-Image\-Bytes\-Block\-:}
+\begin{DoxyCompactList}\small\item\em The class assumes a single texture, which is drawn on a 2\-D plane parralel to the screen. \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_r_r_open_g_l_afc9f8505583fd382237d1a2c3b5d70c7}{init\-Shader\-Uniform\-:of\-Data\-Type\-:}
+\begin{DoxyCompactList}\small\item\em This method allows a uniform variable to be passed to the fragment shader. \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_r_r_open_g_l_a49542e5ad391645248c2a89cd03b4dfe}{shader\-Uniform\-:set\-Value\-:}
+\begin{DoxyCompactList}\small\item\em A method to set the value of a uniform variable that can be accessed by the fragment shader. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class to handle the Open\-G\-L calls for an image processing application. 
+
+A single texture is used and it is operating on using G\-L\-S\-L (shaders). The class is designed to process a U\-I\-Image of a byte array image on the graphics chip easily. \begin{DoxyAuthor}{Author}
+Stuart Lynch \href{mailto:stuart.lynch@uea.ac.uk}{\tt stuart.\-lynch@uea.\-ac.\-uk} 
+\end{DoxyAuthor}
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_r_r_open_g_l_afc9f8505583fd382237d1a2c3b5d70c7}{\index{R\-R\-Open\-G\-L@{R\-R\-Open\-G\-L}!init\-Shader\-Uniform\-:of\-Data\-Type\-:@{init\-Shader\-Uniform\-:of\-Data\-Type\-:}}
+\index{init\-Shader\-Uniform\-:of\-Data\-Type\-:@{init\-Shader\-Uniform\-:of\-Data\-Type\-:}!RROpenGL@{R\-R\-Open\-G\-L}}
+\subsubsection[{init\-Shader\-Uniform\-:of\-Data\-Type\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) init\-Shader\-Uniform\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{name}
+\item[{ofDataType:(G\-L\-S\-L\-\_\-\-D\-A\-T\-A\-\_\-\-T\-Y\-P\-E)}]{data\-Type}
+\end{DoxyParamCaption}
+}}\label{interface_r_r_open_g_l_afc9f8505583fd382237d1a2c3b5d70c7}
+
+
+This method allows a uniform variable to be passed to the fragment shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & A string of the name of the variable to accessed in the shader. This has to exactly match the name used in the shader code. \\
+\hline
+{\em data\-Type} & The G\-L\-S\-L datatype associated with the variable. \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_r_r_open_g_l_a28b3ad4fa31ec4a4175bb3dc89b71db3}{\index{R\-R\-Open\-G\-L@{R\-R\-Open\-G\-L}!init\-With\-Layer\-:vertex\-Shader\-:fragment\-Shader\-:@{init\-With\-Layer\-:vertex\-Shader\-:fragment\-Shader\-:}}
+\index{init\-With\-Layer\-:vertex\-Shader\-:fragment\-Shader\-:@{init\-With\-Layer\-:vertex\-Shader\-:fragment\-Shader\-:}!RROpenGL@{R\-R\-Open\-G\-L}}
+\subsubsection[{init\-With\-Layer\-:vertex\-Shader\-:fragment\-Shader\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-With\-Layer\-: 
+\begin{DoxyParamCaption}
+\item[{(C\-A\-E\-A\-G\-L\-Layer $\ast$)}]{layer}
+\item[{vertexShader:(N\-S\-String $\ast$)}]{vertex\-Shader}
+\item[{fragmentShader:(N\-S\-String $\ast$)}]{fragment\-Shader}
+\end{DoxyParamCaption}
+}}\label{interface_r_r_open_g_l_a28b3ad4fa31ec4a4175bb3dc89b71db3}
+
+
+Initialize an Open\-G\-L object. 
+
+The app shouldn't need more than one instance of this at a time. 
+\begin{DoxyParams}{Parameters}
+{\em layer} & The Open\-G\-L layer to draw to. \\
+\hline
+{\em vertex\-Shader} & The name of the vertex\-Shader file. A \char`\"{}.\-glsl\char`\"{} file is assumed. \\
+\hline
+{\em fragment\-Shader} & The name of the fragment\-Shader file. A \char`\"{}.\-glsl\char`\"{} file is assumed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new instance of \hyperlink{interface_r_r_open_g_l}{R\-R\-Open\-G\-L}. 
+\end{DoxyReturn}
+\hypertarget{interface_r_r_open_g_l_a946656991c6afc711527622321ba290d}{\index{R\-R\-Open\-G\-L@{R\-R\-Open\-G\-L}!render@{render}}
+\index{render@{render}!RROpenGL@{R\-R\-Open\-G\-L}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) render 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_r_open_g_l_a946656991c6afc711527622321ba290d}
+
+
+Render the current frame. 
+
+Should be called on a regularly basis to keep the screen up to date. \hypertarget{interface_r_r_open_g_l_a80c8099fdb52ef67650e7b3f55ebecee}{\index{R\-R\-Open\-G\-L@{R\-R\-Open\-G\-L}!setup\-Texture\-With\-Image\-:process\-Image\-Bytes\-Block\-:@{setup\-Texture\-With\-Image\-:process\-Image\-Bytes\-Block\-:}}
+\index{setup\-Texture\-With\-Image\-:process\-Image\-Bytes\-Block\-:@{setup\-Texture\-With\-Image\-:process\-Image\-Bytes\-Block\-:}!RROpenGL@{R\-R\-Open\-G\-L}}
+\subsubsection[{setup\-Texture\-With\-Image\-:process\-Image\-Bytes\-Block\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) setup\-Texture\-With\-Image\-: 
+\begin{DoxyParamCaption}
+\item[{(U\-I\-Image $\ast$)}]{img}
+\item[{processImageBytesBlock:(G\-Lubyte $\ast$bytes, size\-\_\-t width, size\-\_\-t height)}]{process\-Image\-Bytes}
+\end{DoxyParamCaption}
+}}\label{interface_r_r_open_g_l_a80c8099fdb52ef67650e7b3f55ebecee}
+
+
+The class assumes a single texture, which is drawn on a 2\-D plane parralel to the screen. 
+
+This method initizes the texture with U\-I\-Image. 
+\begin{DoxyParams}{Parameters}
+{\em img} & A U\-I\-Image. \\
+\hline
+{\em process\-Image\-Bytes} & This block is called after the bytes are extracted from the U\-I\-Image. Any extra processing that needs to be done to the image before it is processed on the graphics chip is done here. \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_r_r_open_g_l_aece4b95562f455788886ec98d85e7078}{\index{R\-R\-Open\-G\-L@{R\-R\-Open\-G\-L}!setup\-Texture\-With\-Image\-Bytes\-:image\-Size\-:@{setup\-Texture\-With\-Image\-Bytes\-:image\-Size\-:}}
+\index{setup\-Texture\-With\-Image\-Bytes\-:image\-Size\-:@{setup\-Texture\-With\-Image\-Bytes\-:image\-Size\-:}!RROpenGL@{R\-R\-Open\-G\-L}}
+\subsubsection[{setup\-Texture\-With\-Image\-Bytes\-:image\-Size\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) setup\-Texture\-With\-Image\-Bytes\-: 
+\begin{DoxyParamCaption}
+\item[{(void $\ast$)}]{bytes}
+\item[{imageSize:(C\-G\-Size)}]{img\-Size}
+\end{DoxyParamCaption}
+}}\label{interface_r_r_open_g_l_aece4b95562f455788886ec98d85e7078}
+
+
+The class assumes a single texture, which is drawn on a 2\-D plane parralel to the screen. 
+
+This method initizes the texture with a byte array of rgba's. 
+\begin{DoxyParams}{Parameters}
+{\em bytes} & A pointer to an array of bytes, representing the image. \\
+\hline
+{\em img\-Size} & The width and height of the image in pixels. \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_r_r_open_g_l_a49542e5ad391645248c2a89cd03b4dfe}{\index{R\-R\-Open\-G\-L@{R\-R\-Open\-G\-L}!shader\-Uniform\-:set\-Value\-:@{shader\-Uniform\-:set\-Value\-:}}
+\index{shader\-Uniform\-:set\-Value\-:@{shader\-Uniform\-:set\-Value\-:}!RROpenGL@{R\-R\-Open\-G\-L}}
+\subsubsection[{shader\-Uniform\-:set\-Value\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) shader\-Uniform\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{name}
+\item[{setValue:(void $\ast$)}]{value}
+\end{DoxyParamCaption}
+}}\label{interface_r_r_open_g_l_a49542e5ad391645248c2a89cd03b4dfe}
+
+
+A method to set the value of a uniform variable that can be accessed by the fragment shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & A string of the name of the variable to accessed in the shader. This has to exactly match the name used in the shader code. \\
+\hline
+{\em value} & A point to the value or values to be passed to the shader uniform variable. The array should contain the number of elements that the specified G\-L\-S\-L data type can hold. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Rail\-Road/R\-R\-Open\-G\-L.\-h\item 
+Rail\-Road/R\-R\-Open\-G\-L.\-m\end{DoxyCompactItemize}

@@ -1,0 +1,496 @@
+\hypertarget{interface_r_r_matrix2_d}{\section{R\-R\-Matrix2\-D Class Reference}
+\label{interface_r_r_matrix2_d}\index{R\-R\-Matrix2\-D@{R\-R\-Matrix2\-D}}
+}
+
+
+A class to represent a matrix.  
+
+
+
+
+{\ttfamily \#import $<$R\-R\-Matrix2\-D.\-h$>$}
+
+
+
+Inherits N\-S\-Object, and $<$\-N\-S\-Copying$>$.
+
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(id) -\/ \hyperlink{interface_r_r_matrix2_d_ab604425fdf51b0fb71763c5b6114c9d1}{init\-With\-Rows\-:\-Columns\-:}
+\begin{DoxyCompactList}\small\item\em Initialize an empty matrix. \end{DoxyCompactList}\item 
+(id) -\/ \hyperlink{interface_r_r_matrix2_d_ab7116241082df2892758a9633ef88495}{init\-With\-Bytes\-:\-Rows\-:\-Columns\-:}
+\begin{DoxyCompactList}\small\item\em Initialize a matrix with the contents of an array of floats. \end{DoxyCompactList}\item 
+(id) -\/ \hyperlink{interface_r_r_matrix2_d_a01290dae601c6f39f96b3d8c3d2bbf24}{init\-Idenity\-With\-Size\-:}
+\begin{DoxyCompactList}\small\item\em Initialize a square identity matrix. \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_r_r_matrix2_d_a54ba8d2366708bc06a92257e632e5d1e}{set\-Value\-:at\-Row\-:\-Column\-:}
+\begin{DoxyCompactList}\small\item\em Assign a new value to the location at the given row and column. \end{DoxyCompactList}\item 
+(float) -\/ \hyperlink{interface_r_r_matrix2_d_a8e1d370aba97cdde1f3ce62a55e40bb2}{value\-At\-Row\-:\-Column\-:}
+\begin{DoxyCompactList}\small\item\em Get the value at the location specified by the given row and column. \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_r_r_matrix2_d_a1440c2b1ae6907bbb6f867e05d1c72af}{set\-Value\-:at\-Index\-:}
+\begin{DoxyCompactList}\small\item\em Set a value at the single index in the array representing the matrix. \end{DoxyCompactList}\item 
+(float) -\/ \hyperlink{interface_r_r_matrix2_d_a8ded74e5cdda75cd6128d971d3a10ace}{value\-At\-Index\-:}
+\begin{DoxyCompactList}\small\item\em Get a value at the single index in the array representing the matrix. \end{DoxyCompactList}\item 
+(\hyperlink{interface_r_r_matrix2_d}{R\-R\-Matrix2\-D} $\ast$) -\/ \hyperlink{interface_r_r_matrix2_d_a6a6b1aed8f197f37a6fb225a4621f843}{add\-:}
+\begin{DoxyCompactList}\small\item\em Element by element addition of this matrix and another matrix. \end{DoxyCompactList}\item 
+(\hyperlink{interface_r_r_matrix2_d}{R\-R\-Matrix2\-D} $\ast$) -\/ \hyperlink{interface_r_r_matrix2_d_a855feab78e14c68a8cbf1bba1c7fa510}{subtract\-:}
+\begin{DoxyCompactList}\small\item\em Element by element subtraction of this matrix and another matrix. \end{DoxyCompactList}\item 
+(\hyperlink{interface_r_r_matrix2_d}{R\-R\-Matrix2\-D} $\ast$) -\/ \hyperlink{interface_r_r_matrix2_d_af3176870decbecdcdd18d382085e3e6a}{multiply\-:}
+\begin{DoxyCompactList}\small\item\em Matrix muiltiplcation of this matrix and another matrix. \end{DoxyCompactList}\item 
+(\hyperlink{interface_r_r_matrix2_d}{R\-R\-Matrix2\-D} $\ast$) -\/ \hyperlink{interface_r_r_matrix2_d_a31d973e08150afbd0ff4f2681f49a818}{add\-Scalar\-:}
+\begin{DoxyCompactList}\small\item\em Add a single scalar to every element of this matrix. \end{DoxyCompactList}\item 
+(\hyperlink{interface_r_r_matrix2_d}{R\-R\-Matrix2\-D} $\ast$) -\/ \hyperlink{interface_r_r_matrix2_d_a31152b4618cc5bc798919294ece49ae8}{subtract\-Scalar\-:}
+\begin{DoxyCompactList}\small\item\em Subtract a single scalar from every element of this matrix. \end{DoxyCompactList}\item 
+(\hyperlink{interface_r_r_matrix2_d}{R\-R\-Matrix2\-D} $\ast$) -\/ \hyperlink{interface_r_r_matrix2_d_a959a7d0285b5bc63d8d6ae7903a2452b}{multiply\-Scalar\-:}
+\begin{DoxyCompactList}\small\item\em Multiply every element in this matrix by the given scalar. \end{DoxyCompactList}\item 
+(\hyperlink{interface_r_r_matrix2_d}{R\-R\-Matrix2\-D} $\ast$) -\/ \hyperlink{interface_r_r_matrix2_d_ae83a92e76b0ab058bebc986ca0bad1c3}{raise\-:}
+\begin{DoxyCompactList}\small\item\em Raise each element in this matrix to the power of the given scalar. \end{DoxyCompactList}\item 
+(\hyperlink{interface_r_r_matrix2_d}{R\-R\-Matrix2\-D} $\ast$) -\/ \hyperlink{interface_r_r_matrix2_d_a765cfd394402dfaf90a43abebc4ac3b5}{solve\-:}
+\begin{DoxyCompactList}\small\item\em Solve {\ttfamily Ax=b}. \end{DoxyCompactList}\item 
+(\hyperlink{interface_r_r_matrix2_d}{R\-R\-Matrix2\-D} $\ast$) -\/ \hyperlink{interface_r_r_matrix2_d_a563fcc498bfcdc04288e19804e5b17b8}{transpose}
+\begin{DoxyCompactList}\small\item\em The transpose of this matrix. \end{DoxyCompactList}\item 
+(float) -\/ \hyperlink{interface_r_r_matrix2_d_a2166f8146ff0d7124370fa883b71db5a}{euclid\-Sq\-:}
+\begin{DoxyCompactList}\small\item\em The sum of squared euclidean distances between two matrices. \end{DoxyCompactList}\item 
+\hypertarget{interface_r_r_matrix2_d_ad3ab5b438b3cac957037a1251deae212}{(void) -\/ \hyperlink{interface_r_r_matrix2_d_ad3ab5b438b3cac957037a1251deae212}{print}}\label{interface_r_r_matrix2_d_ad3ab5b438b3cac957037a1251deae212}
+
+\begin{DoxyCompactList}\small\item\em Print the contents of this matrix to the concole. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Class Methods}
+\begin{DoxyCompactItemize}
+\item 
+(id) + \hyperlink{interface_r_r_matrix2_d_a457c3530492815ba58e491c9e04bb666}{matrix\-With\-Rows\-:\-Columns\-:}
+\begin{DoxyCompactList}\small\item\em Static Initialization of an empty matrix. \end{DoxyCompactList}\item 
+(id) + \hyperlink{interface_r_r_matrix2_d_ab258506be55447b8ddad7792db90f49f}{matrix\-With\-Bytes\-:\-Rows\-:\-Columns\-:}
+\begin{DoxyCompactList}\small\item\em Static Initialization of a matrix with the contents of an array of floats. \end{DoxyCompactList}\item 
+(id) + \hyperlink{interface_r_r_matrix2_d_aeef302e8ad30db10d859782bf64d2679}{identity\-With\-Size\-:}
+\begin{DoxyCompactList}\small\item\em Static Initialization of a square identity matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{interface_r_r_matrix2_d_ae54ee4fa664a1ad29afea6a9f691509f}{uint \hyperlink{interface_r_r_matrix2_d_ae54ee4fa664a1ad29afea6a9f691509f}{rows}}\label{interface_r_r_matrix2_d_ae54ee4fa664a1ad29afea6a9f691509f}
+
+\begin{DoxyCompactList}\small\item\em The number of rows the matrix has. \end{DoxyCompactList}\item 
+\hypertarget{interface_r_r_matrix2_d_af2ce736f85fec6263867d793597678f2}{uint \hyperlink{interface_r_r_matrix2_d_af2ce736f85fec6263867d793597678f2}{columns}}\label{interface_r_r_matrix2_d_af2ce736f85fec6263867d793597678f2}
+
+\begin{DoxyCompactList}\small\item\em The number of columns the matrix has. \end{DoxyCompactList}\item 
+\hypertarget{interface_r_r_matrix2_d_ab61474b7d341bf1bb3dfa08c977fe1c6}{uint \hyperlink{interface_r_r_matrix2_d_ab61474b7d341bf1bb3dfa08c977fe1c6}{numel}}\label{interface_r_r_matrix2_d_ab61474b7d341bf1bb3dfa08c977fe1c6}
+
+\begin{DoxyCompactList}\small\item\em The total number of elements the matrix has. \end{DoxyCompactList}\item 
+\hypertarget{interface_r_r_matrix2_d_ae20d9744dec88b7a5bd7cb76a3718584}{float $\ast$ \hyperlink{interface_r_r_matrix2_d_ae20d9744dec88b7a5bd7cb76a3718584}{bytes}}\label{interface_r_r_matrix2_d_ae20d9744dec88b7a5bd7cb76a3718584}
+
+\begin{DoxyCompactList}\small\item\em An array of bytes, containing the matrix contents. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class to represent a matrix. 
+
+It contains many useful methods for matrix manipulation. \begin{DoxyAuthor}{Author}
+Stuart Lynch \href{mailto:stuart.lynch@uea.ac.uk}{\tt stuart.\-lynch@uea.\-ac.\-uk} 
+\end{DoxyAuthor}
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_r_r_matrix2_d_a6a6b1aed8f197f37a6fb225a4621f843}{\index{R\-R\-Matrix2\-D@{R\-R\-Matrix2\-D}!add\-:@{add\-:}}
+\index{add\-:@{add\-:}!RRMatrix2D@{R\-R\-Matrix2\-D}}
+\subsubsection[{add\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-R\-Matrix2\-D} $\ast$) add\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-R\-Matrix2\-D} $\ast$)}]{m}
+\end{DoxyParamCaption}
+}}\label{interface_r_r_matrix2_d_a6a6b1aed8f197f37a6fb225a4621f843}
+
+
+Element by element addition of this matrix and another matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & The matrix to add to this one. Must be the same dimensions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new matrix of this matrix plus the matrix m. 
+\end{DoxyReturn}
+\hypertarget{interface_r_r_matrix2_d_a31d973e08150afbd0ff4f2681f49a818}{\index{R\-R\-Matrix2\-D@{R\-R\-Matrix2\-D}!add\-Scalar\-:@{add\-Scalar\-:}}
+\index{add\-Scalar\-:@{add\-Scalar\-:}!RRMatrix2D@{R\-R\-Matrix2\-D}}
+\subsubsection[{add\-Scalar\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-R\-Matrix2\-D} $\ast$) add\-Scalar\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{s}
+\end{DoxyParamCaption}
+}}\label{interface_r_r_matrix2_d_a31d973e08150afbd0ff4f2681f49a818}
+
+
+Add a single scalar to every element of this matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The scalar to add. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new matrix containing the result of the addition. 
+\end{DoxyReturn}
+\hypertarget{interface_r_r_matrix2_d_a2166f8146ff0d7124370fa883b71db5a}{\index{R\-R\-Matrix2\-D@{R\-R\-Matrix2\-D}!euclid\-Sq\-:@{euclid\-Sq\-:}}
+\index{euclid\-Sq\-:@{euclid\-Sq\-:}!RRMatrix2D@{R\-R\-Matrix2\-D}}
+\subsubsection[{euclid\-Sq\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) euclid\-Sq\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-R\-Matrix2\-D} $\ast$)}]{m}
+\end{DoxyParamCaption}
+}}\label{interface_r_r_matrix2_d_a2166f8146ff0d7124370fa883b71db5a}
+
+
+The sum of squared euclidean distances between two matrices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & The matrix to compare against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The sum of squared euclidean distances. 
+\end{DoxyReturn}
+\hypertarget{interface_r_r_matrix2_d_aeef302e8ad30db10d859782bf64d2679}{\index{R\-R\-Matrix2\-D@{R\-R\-Matrix2\-D}!identity\-With\-Size\-:@{identity\-With\-Size\-:}}
+\index{identity\-With\-Size\-:@{identity\-With\-Size\-:}!RRMatrix2D@{R\-R\-Matrix2\-D}}
+\subsubsection[{identity\-With\-Size\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (id) identity\-With\-Size\-: 
+\begin{DoxyParamCaption}
+\item[{(uint)}]{s}
+\end{DoxyParamCaption}
+}}\label{interface_r_r_matrix2_d_aeef302e8ad30db10d859782bf64d2679}
+
+
+Static Initialization of a square identity matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The size of the square matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new instance of \hyperlink{interface_r_r_matrix2_d}{R\-R\-Matrix2\-D} 
+\end{DoxyReturn}
+\hypertarget{interface_r_r_matrix2_d_a01290dae601c6f39f96b3d8c3d2bbf24}{\index{R\-R\-Matrix2\-D@{R\-R\-Matrix2\-D}!init\-Idenity\-With\-Size\-:@{init\-Idenity\-With\-Size\-:}}
+\index{init\-Idenity\-With\-Size\-:@{init\-Idenity\-With\-Size\-:}!RRMatrix2D@{R\-R\-Matrix2\-D}}
+\subsubsection[{init\-Idenity\-With\-Size\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-Idenity\-With\-Size\-: 
+\begin{DoxyParamCaption}
+\item[{(uint)}]{s}
+\end{DoxyParamCaption}
+}}\label{interface_r_r_matrix2_d_a01290dae601c6f39f96b3d8c3d2bbf24}
+
+
+Initialize a square identity matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The size of the square matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new instance of \hyperlink{interface_r_r_matrix2_d}{R\-R\-Matrix2\-D} 
+\end{DoxyReturn}
+\hypertarget{interface_r_r_matrix2_d_ab7116241082df2892758a9633ef88495}{\index{R\-R\-Matrix2\-D@{R\-R\-Matrix2\-D}!init\-With\-Bytes\-:\-Rows\-:\-Columns\-:@{init\-With\-Bytes\-:\-Rows\-:\-Columns\-:}}
+\index{init\-With\-Bytes\-:\-Rows\-:\-Columns\-:@{init\-With\-Bytes\-:\-Rows\-:\-Columns\-:}!RRMatrix2D@{R\-R\-Matrix2\-D}}
+\subsubsection[{init\-With\-Bytes\-:\-Rows\-:\-Columns\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-With\-Bytes\-: 
+\begin{DoxyParamCaption}
+\item[{(void $\ast$)}]{b}
+\item[{Rows:(uint)}]{r}
+\item[{Columns:(uint)}]{c}
+\end{DoxyParamCaption}
+}}\label{interface_r_r_matrix2_d_ab7116241082df2892758a9633ef88495}
+
+
+Initialize a matrix with the contents of an array of floats. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bytes} & The raw data to initialize a matrix with (array of floats). \\
+\hline
+{\em r} & The number of rows. \\
+\hline
+{\em c} & The number of columns. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new instance of \hyperlink{interface_r_r_matrix2_d}{R\-R\-Matrix2\-D} 
+\end{DoxyReturn}
+\hypertarget{interface_r_r_matrix2_d_ab604425fdf51b0fb71763c5b6114c9d1}{\index{R\-R\-Matrix2\-D@{R\-R\-Matrix2\-D}!init\-With\-Rows\-:\-Columns\-:@{init\-With\-Rows\-:\-Columns\-:}}
+\index{init\-With\-Rows\-:\-Columns\-:@{init\-With\-Rows\-:\-Columns\-:}!RRMatrix2D@{R\-R\-Matrix2\-D}}
+\subsubsection[{init\-With\-Rows\-:\-Columns\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (id) init\-With\-Rows\-: 
+\begin{DoxyParamCaption}
+\item[{(uint)}]{r}
+\item[{Columns:(uint)}]{c}
+\end{DoxyParamCaption}
+}}\label{interface_r_r_matrix2_d_ab604425fdf51b0fb71763c5b6114c9d1}
+
+
+Initialize an empty matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The number of rows. \\
+\hline
+{\em c} & The number of columns. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new instance of \hyperlink{interface_r_r_matrix2_d}{R\-R\-Matrix2\-D} 
+\end{DoxyReturn}
+\hypertarget{interface_r_r_matrix2_d_ab258506be55447b8ddad7792db90f49f}{\index{R\-R\-Matrix2\-D@{R\-R\-Matrix2\-D}!matrix\-With\-Bytes\-:\-Rows\-:\-Columns\-:@{matrix\-With\-Bytes\-:\-Rows\-:\-Columns\-:}}
+\index{matrix\-With\-Bytes\-:\-Rows\-:\-Columns\-:@{matrix\-With\-Bytes\-:\-Rows\-:\-Columns\-:}!RRMatrix2D@{R\-R\-Matrix2\-D}}
+\subsubsection[{matrix\-With\-Bytes\-:\-Rows\-:\-Columns\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (id) matrix\-With\-Bytes\-: 
+\begin{DoxyParamCaption}
+\item[{(void $\ast$)}]{b}
+\item[{Rows:(uint)}]{r}
+\item[{Columns:(uint)}]{c}
+\end{DoxyParamCaption}
+}}\label{interface_r_r_matrix2_d_ab258506be55447b8ddad7792db90f49f}
+
+
+Static Initialization of a matrix with the contents of an array of floats. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bytes} & The raw data to initialize a matrix with (array of floats). \\
+\hline
+{\em r} & The number of rows. \\
+\hline
+{\em c} & The number of columns. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new instance of \hyperlink{interface_r_r_matrix2_d}{R\-R\-Matrix2\-D} 
+\end{DoxyReturn}
+\hypertarget{interface_r_r_matrix2_d_a457c3530492815ba58e491c9e04bb666}{\index{R\-R\-Matrix2\-D@{R\-R\-Matrix2\-D}!matrix\-With\-Rows\-:\-Columns\-:@{matrix\-With\-Rows\-:\-Columns\-:}}
+\index{matrix\-With\-Rows\-:\-Columns\-:@{matrix\-With\-Rows\-:\-Columns\-:}!RRMatrix2D@{R\-R\-Matrix2\-D}}
+\subsubsection[{matrix\-With\-Rows\-:\-Columns\-:}]{\setlength{\rightskip}{0pt plus 5cm}+ (id) matrix\-With\-Rows\-: 
+\begin{DoxyParamCaption}
+\item[{(uint)}]{r}
+\item[{Columns:(uint)}]{c}
+\end{DoxyParamCaption}
+}}\label{interface_r_r_matrix2_d_a457c3530492815ba58e491c9e04bb666}
+
+
+Static Initialization of an empty matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The number of rows. \\
+\hline
+{\em c} & The number of columns. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new instance of \hyperlink{interface_r_r_matrix2_d}{R\-R\-Matrix2\-D} 
+\end{DoxyReturn}
+\hypertarget{interface_r_r_matrix2_d_af3176870decbecdcdd18d382085e3e6a}{\index{R\-R\-Matrix2\-D@{R\-R\-Matrix2\-D}!multiply\-:@{multiply\-:}}
+\index{multiply\-:@{multiply\-:}!RRMatrix2D@{R\-R\-Matrix2\-D}}
+\subsubsection[{multiply\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-R\-Matrix2\-D} $\ast$) multiply\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-R\-Matrix2\-D} $\ast$)}]{m}
+\end{DoxyParamCaption}
+}}\label{interface_r_r_matrix2_d_af3176870decbecdcdd18d382085e3e6a}
+
+
+Matrix muiltiplcation of this matrix and another matrix. 
+
+The inner dimensions must match. 
+\begin{DoxyParams}{Parameters}
+{\em m} & The matrix to multiply by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new matrix containing the result of the multiplication. 
+\end{DoxyReturn}
+\hypertarget{interface_r_r_matrix2_d_a959a7d0285b5bc63d8d6ae7903a2452b}{\index{R\-R\-Matrix2\-D@{R\-R\-Matrix2\-D}!multiply\-Scalar\-:@{multiply\-Scalar\-:}}
+\index{multiply\-Scalar\-:@{multiply\-Scalar\-:}!RRMatrix2D@{R\-R\-Matrix2\-D}}
+\subsubsection[{multiply\-Scalar\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-R\-Matrix2\-D} $\ast$) multiply\-Scalar\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{s}
+\end{DoxyParamCaption}
+}}\label{interface_r_r_matrix2_d_a959a7d0285b5bc63d8d6ae7903a2452b}
+
+
+Multiply every element in this matrix by the given scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The scalar to multiply by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new matrix containing the result of the multiplication. 
+\end{DoxyReturn}
+\hypertarget{interface_r_r_matrix2_d_ae83a92e76b0ab058bebc986ca0bad1c3}{\index{R\-R\-Matrix2\-D@{R\-R\-Matrix2\-D}!raise\-:@{raise\-:}}
+\index{raise\-:@{raise\-:}!RRMatrix2D@{R\-R\-Matrix2\-D}}
+\subsubsection[{raise\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-R\-Matrix2\-D} $\ast$) raise\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{s}
+\end{DoxyParamCaption}
+}}\label{interface_r_r_matrix2_d_ae83a92e76b0ab058bebc986ca0bad1c3}
+
+
+Raise each element in this matrix to the power of the given scalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The scalar to raise by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new matrix containing the result of the raising. 
+\end{DoxyReturn}
+\hypertarget{interface_r_r_matrix2_d_a1440c2b1ae6907bbb6f867e05d1c72af}{\index{R\-R\-Matrix2\-D@{R\-R\-Matrix2\-D}!set\-Value\-:at\-Index\-:@{set\-Value\-:at\-Index\-:}}
+\index{set\-Value\-:at\-Index\-:@{set\-Value\-:at\-Index\-:}!RRMatrix2D@{R\-R\-Matrix2\-D}}
+\subsubsection[{set\-Value\-:at\-Index\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Value\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{v}
+\item[{atIndex:(uint)}]{i}
+\end{DoxyParamCaption}
+}}\label{interface_r_r_matrix2_d_a1440c2b1ae6907bbb6f867e05d1c72af}
+
+
+Set a value at the single index in the array representing the matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & The new value to be assigned. \\
+\hline
+{\em i} & The index. \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_r_r_matrix2_d_a54ba8d2366708bc06a92257e632e5d1e}{\index{R\-R\-Matrix2\-D@{R\-R\-Matrix2\-D}!set\-Value\-:at\-Row\-:\-Column\-:@{set\-Value\-:at\-Row\-:\-Column\-:}}
+\index{set\-Value\-:at\-Row\-:\-Column\-:@{set\-Value\-:at\-Row\-:\-Column\-:}!RRMatrix2D@{R\-R\-Matrix2\-D}}
+\subsubsection[{set\-Value\-:at\-Row\-:\-Column\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) set\-Value\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{v}
+\item[{atRow:(uint)}]{i}
+\item[{Column:(uint)}]{j}
+\end{DoxyParamCaption}
+}}\label{interface_r_r_matrix2_d_a54ba8d2366708bc06a92257e632e5d1e}
+
+
+Assign a new value to the location at the given row and column. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & The new value to be assigned. \\
+\hline
+{\em i} & Row to assign new value. \\
+\hline
+{\em j} & Column to assign new value. \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_r_r_matrix2_d_a765cfd394402dfaf90a43abebc4ac3b5}{\index{R\-R\-Matrix2\-D@{R\-R\-Matrix2\-D}!solve\-:@{solve\-:}}
+\index{solve\-:@{solve\-:}!RRMatrix2D@{R\-R\-Matrix2\-D}}
+\subsubsection[{solve\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-R\-Matrix2\-D} $\ast$) solve\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-R\-Matrix2\-D} $\ast$)}]{m}
+\end{DoxyParamCaption}
+}}\label{interface_r_r_matrix2_d_a765cfd394402dfaf90a43abebc4ac3b5}
+
+
+Solve {\ttfamily Ax=b}. 
+
+Assuming this matrix {\ttfamily A} has dimensions {\ttfamily n x m} and the input matrix has dimensions {\ttfamily v x w} then the output matrix will be of the dimension {\ttfamily m x v}. 
+\begin{DoxyParams}{Parameters}
+{\em m} & The matrix {\ttfamily b} to solve for {\ttfamily x} in {\ttfamily Ax=b}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The solution to {\ttfamily Ax=b}. 
+\end{DoxyReturn}
+\hypertarget{interface_r_r_matrix2_d_a855feab78e14c68a8cbf1bba1c7fa510}{\index{R\-R\-Matrix2\-D@{R\-R\-Matrix2\-D}!subtract\-:@{subtract\-:}}
+\index{subtract\-:@{subtract\-:}!RRMatrix2D@{R\-R\-Matrix2\-D}}
+\subsubsection[{subtract\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-R\-Matrix2\-D} $\ast$) subtract\-: 
+\begin{DoxyParamCaption}
+\item[{({\bf R\-R\-Matrix2\-D} $\ast$)}]{m}
+\end{DoxyParamCaption}
+}}\label{interface_r_r_matrix2_d_a855feab78e14c68a8cbf1bba1c7fa510}
+
+
+Element by element subtraction of this matrix and another matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & The matrix to minus from this one. Must be the same dimensions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new matrix of this matrix minus the matrix m. 
+\end{DoxyReturn}
+\hypertarget{interface_r_r_matrix2_d_a31152b4618cc5bc798919294ece49ae8}{\index{R\-R\-Matrix2\-D@{R\-R\-Matrix2\-D}!subtract\-Scalar\-:@{subtract\-Scalar\-:}}
+\index{subtract\-Scalar\-:@{subtract\-Scalar\-:}!RRMatrix2D@{R\-R\-Matrix2\-D}}
+\subsubsection[{subtract\-Scalar\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-R\-Matrix2\-D} $\ast$) subtract\-Scalar\-: 
+\begin{DoxyParamCaption}
+\item[{(float)}]{s}
+\end{DoxyParamCaption}
+}}\label{interface_r_r_matrix2_d_a31152b4618cc5bc798919294ece49ae8}
+
+
+Subtract a single scalar from every element of this matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The scalar to minus. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new matrix containing the result of the subtraction. 
+\end{DoxyReturn}
+\hypertarget{interface_r_r_matrix2_d_a563fcc498bfcdc04288e19804e5b17b8}{\index{R\-R\-Matrix2\-D@{R\-R\-Matrix2\-D}!transpose@{transpose}}
+\index{transpose@{transpose}!RRMatrix2D@{R\-R\-Matrix2\-D}}
+\subsubsection[{transpose}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-R\-Matrix2\-D} $\ast$) transpose 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+}}\label{interface_r_r_matrix2_d_a563fcc498bfcdc04288e19804e5b17b8}
+
+
+The transpose of this matrix. 
+
+\begin{DoxyReturn}{Returns}
+The transpose of this matrix. 
+\end{DoxyReturn}
+\hypertarget{interface_r_r_matrix2_d_a8ded74e5cdda75cd6128d971d3a10ace}{\index{R\-R\-Matrix2\-D@{R\-R\-Matrix2\-D}!value\-At\-Index\-:@{value\-At\-Index\-:}}
+\index{value\-At\-Index\-:@{value\-At\-Index\-:}!RRMatrix2D@{R\-R\-Matrix2\-D}}
+\subsubsection[{value\-At\-Index\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) value\-At\-Index\-: 
+\begin{DoxyParamCaption}
+\item[{(uint)}]{i}
+\end{DoxyParamCaption}
+}}\label{interface_r_r_matrix2_d_a8ded74e5cdda75cd6128d971d3a10ace}
+
+
+Get a value at the single index in the array representing the matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & The index. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value at the specified index. 
+\end{DoxyReturn}
+\hypertarget{interface_r_r_matrix2_d_a8e1d370aba97cdde1f3ce62a55e40bb2}{\index{R\-R\-Matrix2\-D@{R\-R\-Matrix2\-D}!value\-At\-Row\-:\-Column\-:@{value\-At\-Row\-:\-Column\-:}}
+\index{value\-At\-Row\-:\-Column\-:@{value\-At\-Row\-:\-Column\-:}!RRMatrix2D@{R\-R\-Matrix2\-D}}
+\subsubsection[{value\-At\-Row\-:\-Column\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float) value\-At\-Row\-: 
+\begin{DoxyParamCaption}
+\item[{(uint)}]{i}
+\item[{Column:(uint)}]{j}
+\end{DoxyParamCaption}
+}}\label{interface_r_r_matrix2_d_a8e1d370aba97cdde1f3ce62a55e40bb2}
+
+
+Get the value at the location specified by the given row and column. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Row. \\
+\hline
+{\em j} & Column. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value at the given location. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Rail\-Road/R\-R\-Matrix2\-D.\-h\item 
+Rail\-Road/R\-R\-Matrix2\-D.\-m\end{DoxyCompactItemize}

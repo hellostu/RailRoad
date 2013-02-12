@@ -1,0 +1,99 @@
+\hypertarget{interface_r_r_camera_view}{\section{R\-R\-Camera\-View Class Reference}
+\label{interface_r_r_camera_view}\index{R\-R\-Camera\-View@{R\-R\-Camera\-View}}
+}
+
+
+A class to handle the displaying of the processed camera frames.  
+
+
+
+
+{\ttfamily \#import $<$R\-R\-Camera\-View.\-h$>$}
+
+
+
+Inherits U\-I\-View.
+
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(void) -\/ \hyperlink{interface_r_r_camera_view_a9d39883afac942dd6578d5d78284c859}{intialize\-Open\-G\-L\-With\-Shader\-:}
+\begin{DoxyCompactList}\small\item\em Initializes the Open\-G\-L object. \end{DoxyCompactList}\item 
+(float $\ast$) -\/ \hyperlink{interface_r_r_camera_view_ab4b96ee69e2f3af645cda569642298cf}{attach\-New\-Slider\-With\-Starting\-Position\-:min\-:max\-:}
+\begin{DoxyCompactList}\small\item\em Adds a new slider to the view. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{interface_r_r_open_g_l}{R\-R\-Open\-G\-L} $\ast$ \hyperlink{interface_r_r_camera_view_a925a78f54a71d2cd7d06ec6a9b28a26e}{open\-G\-L}
+\begin{DoxyCompactList}\small\item\em An instance of the Open\-G\-L manager. \end{DoxyCompactList}\item 
+\hypertarget{interface_r_r_camera_view_a21a9845e7ed17d2bf7e50b07181c10ee}{\hyperlink{interface_r_r_camera_capture_session}{R\-R\-Camera\-Capture\-Session} $\ast$ \hyperlink{interface_r_r_camera_view_a21a9845e7ed17d2bf7e50b07181c10ee}{camera\-Capture\-Session}}\label{interface_r_r_camera_view_a21a9845e7ed17d2bf7e50b07181c10ee}
+
+\begin{DoxyCompactList}\small\item\em The \hyperlink{interface_r_r_camera_capture_session}{R\-R\-Camera\-Capture\-Session} handles the grabbing of frames from the camera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class to handle the displaying of the processed camera frames. 
+
+This class extends the U\-I\-View class (from the U\-I\-Kit). This view has an Open\-G\-L layer, so displays whatever is drawn by the active Open\-G\-L session. The class also handles an \hyperlink{interface_r_r_camera_capture_session}{R\-R\-Camera\-Capture\-Session}, which deals with pulling the image frames from the camera. \begin{DoxyAuthor}{Author}
+Stuart Lynch \href{mailto:stuart.lynch@uea.ac.uk}{\tt stuart.\-lynch@uea.\-ac.\-uk} 
+\end{DoxyAuthor}
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_r_r_camera_view_ab4b96ee69e2f3af645cda569642298cf}{\index{R\-R\-Camera\-View@{R\-R\-Camera\-View}!attach\-New\-Slider\-With\-Starting\-Position\-:min\-:max\-:@{attach\-New\-Slider\-With\-Starting\-Position\-:min\-:max\-:}}
+\index{attach\-New\-Slider\-With\-Starting\-Position\-:min\-:max\-:@{attach\-New\-Slider\-With\-Starting\-Position\-:min\-:max\-:}!RRCameraView@{R\-R\-Camera\-View}}
+\subsubsection[{attach\-New\-Slider\-With\-Starting\-Position\-:min\-:max\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (float $\ast$) attach\-New\-Slider\-With\-Starting\-Position\-: 
+\begin{DoxyParamCaption}
+\item[{(G\-Lfloat)}]{start}
+\item[{min:(G\-Lfloat)}]{min}
+\item[{max:(G\-Lfloat)}]{max}
+\end{DoxyParamCaption}
+}}\label{interface_r_r_camera_view_ab4b96ee69e2f3af645cda569642298cf}
+
+
+Adds a new slider to the view. 
+
+This method allows for easy generation of user editable variables via a U\-I\-Slider. 
+\begin{DoxyParams}{Parameters}
+{\em start} & The starting position of the slider. \\
+\hline
+{\em min} & The minimum value of the slider. \\
+\hline
+{\em max} & The maximum value of the slider. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to a float representing the current value of the slider. This should be stored and accessed when required. 
+\end{DoxyReturn}
+\hypertarget{interface_r_r_camera_view_a9d39883afac942dd6578d5d78284c859}{\index{R\-R\-Camera\-View@{R\-R\-Camera\-View}!intialize\-Open\-G\-L\-With\-Shader\-:@{intialize\-Open\-G\-L\-With\-Shader\-:}}
+\index{intialize\-Open\-G\-L\-With\-Shader\-:@{intialize\-Open\-G\-L\-With\-Shader\-:}!RRCameraView@{R\-R\-Camera\-View}}
+\subsubsection[{intialize\-Open\-G\-L\-With\-Shader\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) intialize\-Open\-G\-L\-With\-Shader\-: 
+\begin{DoxyParamCaption}
+\item[{(N\-S\-String $\ast$)}]{fragment\-Shader}
+\end{DoxyParamCaption}
+}}\label{interface_r_r_camera_view_a9d39883afac942dd6578d5d78284c859}
+
+
+Initializes the Open\-G\-L object. 
+
+The method takes the filename of the fragment shader as input. The vertex shader is taken from the file \char`\"{}vertex\-Shader\char`\"{}. The suffix \char`\"{}.\-glsl\char`\"{} is assumed. 
+\begin{DoxyParams}{Parameters}
+{\em fragment\-Shader} & The name of the fragment\-Shader file. A \char`\"{}.\-glsl\char`\"{} file is assumed. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Property Documentation}
+\hypertarget{interface_r_r_camera_view_a925a78f54a71d2cd7d06ec6a9b28a26e}{\index{R\-R\-Camera\-View@{R\-R\-Camera\-View}!open\-G\-L@{open\-G\-L}}
+\index{open\-G\-L@{open\-G\-L}!RRCameraView@{R\-R\-Camera\-View}}
+\subsubsection[{open\-G\-L}]{\setlength{\rightskip}{0pt plus 5cm}-\/ ({\bf R\-R\-Open\-G\-L}$\ast$) open\-G\-L\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [nonatomic]}, {\ttfamily [assign]}}}\label{interface_r_r_camera_view_a925a78f54a71d2cd7d06ec6a9b28a26e}
+
+
+An instance of the Open\-G\-L manager. 
+
+This class deals with all of the Open\-G\-L calls, which are specific to a single image texture displayed to fit the view. 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Rail\-Road/R\-R\-Camera\-View.\-h\item 
+Rail\-Road/R\-R\-Camera\-View.\-m\end{DoxyCompactItemize}
